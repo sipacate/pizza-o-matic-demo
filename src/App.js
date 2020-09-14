@@ -4,11 +4,15 @@ import './App.css';
 import { TabStrip, TabStripTab } from '@progress/kendo-react-layout';
 import { Panel } from './components/Panel';
 
+import ratings from './data/pizza-store-data.json';
+
 const SELECTED_KEY = 'selected';
 
-const regions = [
-  'All Regions', 'North', 'East', 'South', 'West'
-];
+const pluck = (...keys) => (data) => {
+  return keys.reduce((subData, key) => subData === undefined ? subData : subData[key], data);
+};
+
+const regions = ratings.reduce((acc, curr) => [...acc, pluck('name')(curr)], ['All Regions']);
 
 function App() {
   const [selected, setSelected] = React.useState(

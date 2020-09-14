@@ -13,6 +13,35 @@ h1 span {
   padding: 0 0.5rem;
 }
 
+.ratings-header {
+  text-align: center;
+}
+
+.ratings-header .buttons-span {
+  margin-right: 40px;
+  float: right;
+}
+
+.ratings-header h2 {
+  display: inline;
+  font-size: 30px;
+}
+
+.ratings-header img {
+  height: 30px;
+  width: 35px;
+  margin: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
+.ratings-header .active {
+  background: #0040FF40;
+  border-radius: 10px;
+  height: 35px;
+  width: 40px;
+}
+
 @media (max-width: 700px) {
   h1 {
     padding: 1rem;
@@ -23,4 +52,21 @@ h1 span {
   h1 {
     font-size: 1.5rem;
   }
+}
+
+.flex-container {
+  list-style: none;
+  display: inline;
+  flex-wrap: nowrap;
+}
+
+.flex-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 15px;
+  /* float: right; */
 }
