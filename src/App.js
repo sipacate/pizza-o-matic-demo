@@ -40,7 +40,7 @@ function App() {
       >
         {regions.map(region => (
           <TabStripTab title={region} key={region}>
-            <Panel region={region} />
+            <Panel ratings={ratings} region={region} />
           </TabStripTab>
         ))}
       </TabStrip>
