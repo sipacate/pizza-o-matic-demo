@@ -19,6 +19,8 @@ function App() {
     parseInt(localStorage.getItem(SELECTED_KEY), 10) || 0
   );
 
+  const [ isChartView, setChartView ] = React.useState(true);
+
   const onTabSelect = (e) => {
     setSelected(e.selected);
     localStorage.setItem(SELECTED_KEY, e.selected);
@@ -40,7 +42,7 @@ function App() {
       >
         {regions.map(region => (
           <TabStripTab title={region} key={region}>
-            <Panel ratings={ratings} region={region} />
+            <Panel ratings={ratings} region={region} isChartView={isChartView} setChartView={setChartView} />
           </TabStripTab>
         ))}
       </TabStrip>

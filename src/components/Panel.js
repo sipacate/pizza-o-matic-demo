@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Chart,
   ChartTitle,
@@ -78,12 +78,12 @@ const CompanyRatings = ({ ratings }) => {
   );
 };
 
-export const Panel = ({ ratings, region }) => {
+export const Panel = ({ ratings, region, isChartView, setChartView }) => {
 
   const ratingsSplitter = toRatingsSplitter(ratings);
   const companyRatings = toCompanyRatings(ratings);
 
-  const [ chartView, setChartView ] = useState(true);
+  // const [ chartView, setChartView ] = useState(true);
 
   const regionOrStoreMeans = ratingsSplitter(region);
 
@@ -99,13 +99,13 @@ export const Panel = ({ ratings, region }) => {
           <img 
             src="chart-bar.svg" 
             alt="chart view"
-            className={chartView ? "active" : "inactive"}
+            className={isChartView ? "active" : "inactive"}
             onClick={() => setChartView(true)}
           />
           <img 
             src="table.svg" 
             alt="cell view"
-            className={chartView ? "inactive" : "active"}
+            className={isChartView ? "inactive" : "active"}
             onClick={() => setChartView(false)}
           />
           <img 
@@ -115,8 +115,8 @@ export const Panel = ({ ratings, region }) => {
         </span>
       </div>
 
-      {chartView && (<>{chartSeries}</>)}
-      {!chartView && (<>{tableSeries}</>)}
+      {isChartView && (<>{chartSeries}</>)}
+      {!isChartView && (<>{tableSeries}</>)}
 
     </>
   )
