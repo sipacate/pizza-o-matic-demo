@@ -20,18 +20,20 @@ const toFormattedCategory = category => {
 const toTableSeries = ({ ratings, region, means }) => {
   const chartCategories = toChartCategories(ratings);
   const locality = region === 'All Regions' ? 'Region' : 'Restaurant';
-  const seedElement = <Column field={locality} title={locality} key={`first-col-${locality}`} />;
-  
-  const columns = chartCategories.reduce((acc, category) => {
+
+  const heading = <Column field={locality} title={locality} key={`first-col-${locality}`} />;
+  const columns = chartCategories.map(category => {
     const key = `table-column-${category}`
-    return [...acc, <Column field={category} title={category} key={key} />];
-  }, [seedElement]);
+    return <Column field={category} title={category} key={key} />;
+  });
+
+  const headedColumns = [heading, columns];
 
   const gridData = toGridData(locality, means);
 
   return (
     <Grid data={gridData}>
-      {columns}
+      {headedColumns}
     </Grid>
   );
 };
