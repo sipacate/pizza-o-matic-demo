@@ -9,6 +9,7 @@ import {
   ChartCategoryAxisItem,
 } from '@progress/kendo-react-charts';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
+import { saveAs, encodeBase64 } from '@progress/kendo-file-saver';
 import 'hammerjs';
 import { toRatingsSplitter, toCompanyRatings, toChartCategories, toGridData } from '../tools/dataSplitter';
 
@@ -19,7 +20,7 @@ const toFormattedCategory = category => {
 
 const toTableSeries = ({ ratings, region, means }) => {
   const chartCategories = toChartCategories(ratings);
-  const locality = region === 'All Regions' ? 'Region' : 'Restaurant';
+  const locality = region === 'All Regions' ? 'region' : 'restaurant';
 
   const heading = <Column field={locality} title={locality} key={`first-col-${locality}`} />;
   const columns = chartCategories.map(category => {
@@ -36,6 +37,15 @@ const toTableSeries = ({ ratings, region, means }) => {
       {headedColumns}
     </Grid>
   );
+};
+
+const toDownloadData = ({ ratings, region, means }) => {
+  const locality = region === "All Regions" ? "region" : "restaurant";
+  const downloadHeadings = [locality, ...toChartCategories(ratings)].join(',');
+  const gridData = toGridData(locality, means);
+  const rows = gridData.map(rowData => Object.values(rowData).join(','));
+  const downloadBody = `${rows.join('\n')}\n`;
+  return `${downloadHeadings}\n${downloadBody}`;
 };
 
 const toChartSeries = ({ ratings, region, means }) => {
@@ -83,12 +93,14 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
   const ratingsSplitter = toRatingsSplitter(ratings);
   const companyRatings = toCompanyRatings(ratings);
 
-  // const [ chartView, setChartView ] = useState(true);
-
   const regionOrStoreMeans = ratingsSplitter(region);
 
   const chartSeries = toChartSeries({ ratings, region, means: regionOrStoreMeans });
   const tableSeries = toTableSeries({ ratings, region, means: regionOrStoreMeans });
+
+  const downloadData = toDownloadData({ ratings, region, means: regionOrStoreMeans });
+  const dataURI = "data:text/csv;base64," + encodeBase64(downloadData);
+  const onDownload = () => saveAs(dataURI, "pizza_data.csv");
 
   return (
     <>
@@ -111,6 +123,7 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
           <img 
             src="download.svg" 
             alt="download"
+            onClick={onDownload}
           />
         </span>
       </div>
