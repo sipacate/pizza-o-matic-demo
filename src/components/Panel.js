@@ -18,7 +18,7 @@ const toFormattedCategory = category => {
   return upperCaseCategory.split('_').join(' ');
 };
 
-const toTableSeries = ({ ratings, region, means }) => {
+const TableView = ({ ratings, region, means }) => {
   const chartCategories = toChartCategories(ratings);
   const locality = region === 'All Regions' ? 'region' : 'restaurant';
 
@@ -48,7 +48,7 @@ const toDownloadData = ({ ratings, region, means }) => {
   return `${downloadHeadings}\n${downloadBody}`;
 };
 
-const toChartSeries = ({ ratings, region, means }) => {
+const ChartView = ({ ratings, region, means }) => {
   const chartCategories = toChartCategories(ratings);
   const seriesItems = means.map(({ name, ratings }) => {
     const spaceStripper = x => x.split(' ').join('-');
@@ -95,12 +95,13 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
 
   const regionOrStoreMeans = ratingsSplitter(region);
 
-  const chartSeries = toChartSeries({ ratings, region, means: regionOrStoreMeans });
-  const tableSeries = toTableSeries({ ratings, region, means: regionOrStoreMeans });
+  const SeriesView = isChartView ? ChartView : TableView;
 
-  const downloadData = toDownloadData({ ratings, region, means: regionOrStoreMeans });
-  const dataURI = "data:text/csv;base64," + encodeBase64(downloadData);
-  const onDownload = () => saveAs(dataURI, "pizza_data.csv");
+  const onDownload = () => {
+      const downloadData = toDownloadData({ ratings, region, means: regionOrStoreMeans });
+      const dataURI = "data:text/csv;base64," + encodeBase64(downloadData);
+      saveAs(dataURI, "pizza_data.csv");
+  };
 
   return (
     <>
@@ -108,29 +109,30 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
         <h2>Company Ratings</h2>
         <CompanyRatings ratings={companyRatings}/>
         <span className="buttons-span">
-          <img 
-            src="chart-bar.svg" 
+          <img
+            src="chart-bar.svg"
             alt="chart view"
             className={isChartView ? "active" : "inactive"}
             onClick={() => setChartView(true)}
           />
-          <img 
-            src="table.svg" 
+          <img
+            src="table.svg"
             alt="cell view"
             className={isChartView ? "inactive" : "active"}
             onClick={() => setChartView(false)}
           />
-          <img 
-            src="download.svg" 
+          <img
+            src="download.svg"
             alt="download"
             onClick={onDownload}
           />
         </span>
       </div>
-
-      {isChartView && (<>{chartSeries}</>)}
-      {!isChartView && (<>{tableSeries}</>)}
-
+      <SeriesView
+        ratings={ratings}
+        region={region}
+        means={regionOrStoreMeans}
+      />
     </>
   )
 }

@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import { TabStrip, TabStripTab } from '@progress/kendo-react-layout';
 import { Panel } from './components/Panel';
 
-import ratings from './data/pizza-store-data.json';
+import ratingsJSON from './data/pizza-store-data.json';
 
 const SELECTED_KEY = 'selected';
 
-const pluck = (...keys) => (data) => {
-  return keys.reduce((subData, key) => subData === undefined ? subData : subData[key], data);
-};
-
-const regions = ratings.reduce((acc, curr) => [...acc, pluck('name')(curr)], ['All Regions']);
-
 function App() {
-  const [selected, setSelected] = React.useState(
+  const [selected, setSelected] = useState(
     parseInt(localStorage.getItem(SELECTED_KEY), 10) || 0
   );
 
-  const [ isChartView, setChartView ] = React.useState(true);
+  const [isChartView, setChartView] = useState(true);
 
-  const onTabSelect = (e) => {
-    setSelected(e.selected);
-    localStorage.setItem(SELECTED_KEY, e.selected);
-  }
+  const onTabSelect = ({ selected } = {}) => {
+    setSelected(selected);
+    localStorage.setItem(SELECTED_KEY, selected);
+  };
+
+  const [ratings] = useState(ratingsJSON);
+
+  const [regions, setRegions] = useState([]);
+  useEffect(() => {
+      const nextRegions = ['All Regions', ...ratings.map((rating) => rating?.name)];
+      setRegions(nextRegions);
+  }, [ratings]);
 
   return (
     <>
