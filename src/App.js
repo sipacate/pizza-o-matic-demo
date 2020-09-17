@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import { TabStrip, TabStripTab } from '@progress/kendo-react-layout';
@@ -20,13 +20,7 @@ function App() {
     localStorage.setItem(SELECTED_KEY, selected);
   };
 
-  const [ratings] = useState(ratingsJSON);
-
-  const [regions, setRegions] = useState([]);
-  useEffect(() => {
-      const nextRegions = ['All Regions', ...ratings.map((rating) => rating?.name)];
-      setRegions(nextRegions);
-  }, [ratings]);
+  const [ratings] = useState([{ name: 'All Regions' }, ...ratingsJSON]);
 
   return (
     <>
@@ -42,11 +36,18 @@ function App() {
         tabPosition="left"
         animation={false}
       >
-        {regions.map(region => (
-          <TabStripTab title={region} key={region}>
-            <Panel ratings={ratings} region={region} isChartView={isChartView} setChartView={setChartView} />
-          </TabStripTab>
-        ))}
+        {ratings.map((localRatings) => {
+          return (
+            <TabStripTab title={localRatings.name} key={localRatings._id || localRatings.name}>
+              <Panel
+                ratings={ratings}
+                selectedRatingsId={localRatings._id}
+                isChartView={isChartView}
+                setChartView={setChartView}
+              />
+            </TabStripTab>
+          );
+        })}
       </TabStrip>
     </>
   );

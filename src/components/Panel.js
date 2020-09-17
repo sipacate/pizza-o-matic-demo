@@ -88,7 +88,10 @@ const CompanyRatings = ({ ratings }) => {
   );
 };
 
-export const Panel = ({ ratings, region, isChartView, setChartView }) => {
+export const Panel = ({ ratings: [_, ...ratings], selectedRatingsId, isChartView, setChartView }) => {
+
+  const localRatings = ratings.find((rating) => rating._id === selectedRatingsId);
+  const region = localRatings ? localRatings.name : "All Regions";
 
   const ratingsSplitter = toRatingsSplitter(ratings);
   const companyRatings = toCompanyRatings(ratings);
@@ -98,16 +101,20 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
   const SeriesView = isChartView ? ChartView : TableView;
 
   const onDownload = () => {
-      const downloadData = toDownloadData({ ratings, region, means: regionOrStoreMeans });
-      const dataURI = "data:text/csv;base64," + encodeBase64(downloadData);
-      saveAs(dataURI, "pizza_data.csv");
+    const downloadData = toDownloadData({
+      ratings,
+      region,
+      means: regionOrStoreMeans,
+    });
+    const dataURI = "data:text/csv;base64," + encodeBase64(downloadData);
+    saveAs(dataURI, "pizza_data.csv");
   };
 
   return (
     <>
       <div className="ratings-header">
         <h2>Company Ratings</h2>
-        <CompanyRatings ratings={companyRatings}/>
+        <CompanyRatings ratings={companyRatings} />
         <span className="buttons-span">
           <img
             src="chart-bar.svg"
@@ -121,11 +128,7 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
             className={isChartView ? "inactive" : "active"}
             onClick={() => setChartView(false)}
           />
-          <img
-            src="download.svg"
-            alt="download"
-            onClick={onDownload}
-          />
+          <img src="download.svg" alt="download" onClick={onDownload} />
         </span>
       </div>
       <SeriesView
@@ -134,5 +137,12 @@ export const Panel = ({ ratings, region, isChartView, setChartView }) => {
         means={regionOrStoreMeans}
       />
     </>
-  )
+  );
 }
+
+Panel.defaultProps = {
+  ratings: [],
+  selectedRatingsId: "All Regions",
+  isChartView: true,
+  setChartView: () => {}
+};
