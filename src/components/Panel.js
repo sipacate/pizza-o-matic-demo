@@ -10,7 +10,6 @@ import {
 } from '@progress/kendo-react-charts';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { ExcelExport } from '@progress/kendo-react-excel-export';
-import { saveAs, encodeBase64 } from '@progress/kendo-file-saver';
 import 'hammerjs';
 import { toRatingsSplitter, toCompanyRatings, toChartCategories, toGridData } from '../tools/dataSplitter';
 
@@ -43,15 +42,6 @@ const TableView = ({ ratings, region, means, onDownload }) => {
     </ExcelExport>
   );
 };
-
-// const toDownloadData = ({ ratings, region, means }) => {
-//   const locality = region === "All Regions" ? "region" : "restaurant";
-//   const downloadHeadings = [locality, ...toChartCategories(ratings)].join(',');
-//   const gridData = toGridData(locality, means);
-//   const rows = gridData.map(rowData => Object.values(rowData).join(','));
-//   const downloadBody = `${rows.join('\n')}\n`;
-//   return `${downloadHeadings}\n${downloadBody}`;
-// };
 
 const ChartView = ({ ratings, region, means }) => {
   const chartCategories = toChartCategories(ratings);
@@ -105,23 +95,7 @@ export const Panel = ({ ratings: [_, ...ratings], selectedRatingsId, isChartView
 
   const SeriesView = isChartView ? ChartView : TableView;
 
-  // const onDownload = () => {
-  //   const downloadData = toDownloadData({
-  //     ratings,
-  //     region,
-  //     means: regionOrStoreMeans,
-  //   });
-  //   const dataURI = "data:text/csv;base64," + encodeBase64(downloadData);
-  //   saveAs(dataURI, "pizza_data.csv");
-  // };
-
-  const onDownload = useRef({ current: { save: () => console.log('default save') } });
-
-  console.log('onDownload: ', onDownload);
-  console.log('onDownload.current: ', onDownload.current);
-
-  const locality = region === "All Regions" ? "region" : "restaurant";
-  const gridData = toGridData(locality, regionOrStoreMeans);
+  const onDownload = useRef(null);
 
   return (
     <>
@@ -144,21 +118,19 @@ export const Panel = ({ ratings: [_, ...ratings], selectedRatingsId, isChartView
           <img
             src="download.svg"
             alt="download"
-            onClick={onDownload.current.save}
+            onClick={() => onDownload.current.save()}
           />
         </span>
       </div>
-      <ExcelExport data={gridData} fileName="pizza_data.xlsx">
-        <SeriesView
-          ratings={ratings}
-          region={region}
-          means={regionOrStoreMeans}
-          onDownload={onDownload}
-        />
-      </ExcelExport>
+      <SeriesView
+        ratings={ratings}
+        region={region}
+        means={regionOrStoreMeans}
+        onDownload={onDownload}
+      />
     </>
   );
-}
+};
 
 Panel.defaultProps = {
   ratings: [],
