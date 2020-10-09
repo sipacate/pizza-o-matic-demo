@@ -1,3 +1,30 @@
+h1 {
+  background: url('/header.svg') no-repeat;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 2.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+h1 span {
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .ratings-header {
   text-align: center;
 }
