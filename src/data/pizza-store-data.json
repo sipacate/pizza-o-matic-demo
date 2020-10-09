@@ -1,0 +1,1293 @@
+[{
+    "_id": "5f18e151a583d738a4b8bf61",
+    "name": "North",
+    "restaurants": [{
+        "_id": "5f18e15116bdf02aa4c19cfb",
+        "name": "Store 4021",
+        "ratings": [{
+            "date": "2018-04-15T00:49:55+00:00",
+            "values": {
+              "customer": "0.8",
+              "staff_satisfaction": "2.2",
+              "sales": "1.7",
+              "cleanliness": "1.9"
+            }
+          },
+          {
+            "date": "2018-07-10T01:57:04+00:00",
+            "values": {
+              "customer": 3,
+              "staff_satisfaction": "3.5",
+              "sales": "2.5",
+              "cleanliness": "2.1"
+            }
+          },
+          {
+            "date": "2019-10-10T12:48:07+00:00",
+            "values": {
+              "customer": "3.3",
+              "staff_satisfaction": "2.5",
+              "sales": "1.5",
+              "cleanliness": "3.1"
+            }
+          },
+          {
+            "date": "2019-03-23T00:41:38+00:00",
+            "values": {
+              "customer": "1.1",
+              "staff_satisfaction": "4.4",
+              "sales": "2.1",
+              "cleanliness": 3
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e151854647dc4cfaf2c1",
+        "name": "Store 2099",
+        "ratings": [{
+            "date": "2020-01-04T00:04:28+00:00",
+            "values": {
+              "customer": "0.4",
+              "staff_satisfaction": "1.2",
+              "sales": "1.7",
+              "cleanliness": 3
+            }
+          },
+          {
+            "date": "2017-09-19T02:22:17+00:00",
+            "values": {
+              "customer": "4.8",
+              "staff_satisfaction": "1.3",
+              "sales": "2.2",
+              "cleanliness": "1.5"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e15109370a7b73b126d2",
+        "name": "Store 3013",
+        "ratings": [{
+            "date": "2017-07-11T00:30:46+00:00",
+            "values": {
+              "customer": 2,
+              "staff_satisfaction": "1.5",
+              "sales": "4.4",
+              "cleanliness": "2.6"
+            }
+          },
+          {
+            "date": "2018-01-30T17:28:10+00:00",
+            "values": {
+              "customer": 5,
+              "staff_satisfaction": "3.5",
+              "sales": "2.4",
+              "cleanliness": "2.8"
+            }
+          },
+          {
+            "date": "2019-10-04T17:24:52+00:00",
+            "values": {
+              "customer": "1.2",
+              "staff_satisfaction": "4.1",
+              "sales": "0.9",
+              "cleanliness": "4.8"
+            }
+          },
+          {
+            "date": "2018-05-09T02:27:29+00:00",
+            "values": {
+              "customer": 3,
+              "staff_satisfaction": "3.7",
+              "sales": "1.4",
+              "cleanliness": 4
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1514501e036911c8c42",
+        "name": "Store 3023",
+        "ratings": [{
+            "date": "2017-07-09T06:50:59+00:00",
+            "values": {
+              "customer": "2.7",
+              "staff_satisfaction": "4.6",
+              "sales": 1,
+              "cleanliness": "2.8"
+            }
+          },
+          {
+            "date": "2018-12-18T00:02:34+00:00",
+            "values": {
+              "customer": "4.5",
+              "staff_satisfaction": "4.5",
+              "sales": "1.4",
+              "cleanliness": "4.4"
+            }
+          },
+          {
+            "date": "2018-12-17T02:08:52+00:00",
+            "values": {
+              "customer": "0.1",
+              "staff_satisfaction": "1.3",
+              "sales": "0.6",
+              "cleanliness": "3.4"
+            }
+          },
+          {
+            "date": "2019-08-23T12:34:20+00:00",
+            "values": {
+              "customer": "3.4",
+              "staff_satisfaction": "4.7",
+              "sales": "0.1",
+              "cleanliness": "2.9"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e151465d7b11af510ede",
+        "name": "Store 4092",
+        "ratings": [{
+            "date": "2019-04-13T12:52:21+00:00",
+            "values": {
+              "customer": 2,
+              "staff_satisfaction": "0.1",
+              "sales": 5,
+              "cleanliness": 5
+            }
+          },
+          {
+            "date": "2018-03-31T16:59:27+00:00",
+            "values": {
+              "customer": 0,
+              "staff_satisfaction": "0.5",
+              "sales": "1.9",
+              "cleanliness": "4.1"
+            }
+          },
+          {
+            "date": "2019-08-03T15:23:36+00:00",
+            "values": {
+              "customer": "1.7",
+              "staff_satisfaction": 0,
+              "sales": "3.2",
+              "cleanliness": 5
+            }
+          },
+          {
+            "date": "2017-08-15T09:06:37+00:00",
+            "values": {
+              "customer": "0.7",
+              "staff_satisfaction": "3.1",
+              "sales": "3.8",
+              "cleanliness": "4.4"
+            }
+          },
+          {
+            "date": "2017-09-28T12:54:20+00:00",
+            "values": {
+              "customer": "3.5",
+              "staff_satisfaction": 2,
+              "sales": 4,
+              "cleanliness": "2.5"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e151751367ca7fa0aa78",
+        "name": "Store 3062",
+        "ratings": [{
+            "date": "2017-06-06T23:41:33+00:00",
+            "values": {
+              "customer": "1.1",
+              "staff_satisfaction": "0.8",
+              "sales": "4.6",
+              "cleanliness": "4.8"
+            }
+          },
+          {
+            "date": "2017-08-07T14:18:05+00:00",
+            "values": {
+              "customer": "1.3",
+              "staff_satisfaction": "0.5",
+              "sales": "2.8",
+              "cleanliness": "1.4"
+            }
+          },
+          {
+            "date": "2017-05-20T11:04:33+00:00",
+            "values": {
+              "customer": "1.5",
+              "staff_satisfaction": "4.8",
+              "sales": "4.5",
+              "cleanliness": 1
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e151a05658e8940d8b3f",
+        "name": "Store 2020",
+        "ratings": [{
+            "date": "2019-02-22T07:44:31+00:00",
+            "values": {
+              "customer": "2.7",
+              "staff_satisfaction": "4.2",
+              "sales": "4.3",
+              "cleanliness": 4
+            }
+          },
+          {
+            "date": "2018-11-26T18:00:42+00:00",
+            "values": {
+              "customer": "4.1",
+              "staff_satisfaction": 3,
+              "sales": "1.4",
+              "cleanliness": "1.2"
+            }
+          },
+          {
+            "date": "2019-05-22T06:06:48+00:00",
+            "values": {
+              "customer": "4.3",
+              "staff_satisfaction": "1.9",
+              "sales": "0.1",
+              "cleanliness": "0.1"
+            }
+          },
+          {
+            "date": "2020-06-05T06:13:52+00:00",
+            "values": {
+              "customer": "3.7",
+              "staff_satisfaction": "2.6",
+              "sales": "1.9",
+              "cleanliness": "3.5"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "5f18e1a4d9ed4c3568a3afe1",
+    "name": "South",
+    "restaurants": [{
+        "_id": "5f18e1a4ac70678aa70157e5",
+        "name": "Store 4097",
+        "ratings": [{
+            "date": "2020-03-22T17:09:17+00:00",
+            "values": {
+              "customer": "3.6",
+              "staff_satisfaction": "2.1",
+              "sales": "4.9",
+              "cleanliness": "0.4"
+            }
+          },
+          {
+            "date": "2017-06-09T17:43:50+00:00",
+            "values": {
+              "customer": "1.2",
+              "staff_satisfaction": 3,
+              "sales": "2.5",
+              "cleanliness": "0.3"
+            }
+          },
+          {
+            "date": "2018-09-04T05:08:58+00:00",
+            "values": {
+              "customer": "1.9",
+              "staff_satisfaction": "4.3",
+              "sales": "0.5",
+              "cleanliness": "3.1"
+            }
+          },
+          {
+            "date": "2018-02-09T21:31:13+00:00",
+            "values": {
+              "customer": "0.1",
+              "staff_satisfaction": "1.1",
+              "sales": "3.3",
+              "cleanliness": "2.8"
+            }
+          },
+          {
+            "date": "2018-07-30T04:04:21+00:00",
+            "values": {
+              "customer": "0.4",
+              "staff_satisfaction": "3.8",
+              "sales": "3.7",
+              "cleanliness": 4
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a46af1e89b9490259e",
+        "name": "Store 4035",
+        "ratings": [{
+            "date": "2019-12-01T23:18:51+00:00",
+            "values": {
+              "customer": "0.6",
+              "staff_satisfaction": "1.1",
+              "sales": "3.8",
+              "cleanliness": 4
+            }
+          },
+          {
+            "date": "2019-12-25T23:10:58+00:00",
+            "values": {
+              "customer": "3.7",
+              "staff_satisfaction": 3,
+              "sales": "3.8",
+              "cleanliness": "3.4"
+            }
+          },
+          {
+            "date": "2017-04-17T12:23:41+00:00",
+            "values": {
+              "customer": "3.8",
+              "staff_satisfaction": 0,
+              "sales": "4.5",
+              "cleanliness": "3.4"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a405484476f4b995cc",
+        "name": "Store 3096",
+        "ratings": [{
+            "date": "2018-03-05T11:19:42+00:00",
+            "values": {
+              "customer": "0.6",
+              "staff_satisfaction": "4.5",
+              "sales": "3.3",
+              "cleanliness": 1
+            }
+          },
+          {
+            "date": "2017-10-24T23:17:12+00:00",
+            "values": {
+              "customer": "2.2",
+              "staff_satisfaction": 0,
+              "sales": 2,
+              "cleanliness": "2.9"
+            }
+          },
+          {
+            "date": "2018-06-14T03:19:53+00:00",
+            "values": {
+              "customer": "4.6",
+              "staff_satisfaction": 0,
+              "sales": "0.9",
+              "cleanliness": "1.7"
+            }
+          },
+          {
+            "date": "2019-04-03T07:03:12+00:00",
+            "values": {
+              "customer": "1.5",
+              "staff_satisfaction": "1.1",
+              "sales": "1.1",
+              "cleanliness": "1.3"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a46e9cd391f6898f70",
+        "name": "Store 3030",
+        "ratings": [{
+            "date": "2020-03-14T08:18:39+00:00",
+            "values": {
+              "customer": "1.3",
+              "staff_satisfaction": "2.2",
+              "sales": "2.4",
+              "cleanliness": "0.3"
+            }
+          },
+          {
+            "date": "2018-01-01T22:58:27+00:00",
+            "values": {
+              "customer": "1.5",
+              "staff_satisfaction": "1.1",
+              "sales": "1.6",
+              "cleanliness": "4.1"
+            }
+          },
+          {
+            "date": "2017-07-23T22:06:44+00:00",
+            "values": {
+              "customer": 4,
+              "staff_satisfaction": "0.8",
+              "sales": "4.2",
+              "cleanliness": "0.4"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a492cdad8294f63d2c",
+        "name": "Store 2061",
+        "ratings": [{
+            "date": "2017-11-12T15:09:22+00:00",
+            "values": {
+              "customer": 3,
+              "staff_satisfaction": "3.3",
+              "sales": 3,
+              "cleanliness": "2.4"
+            }
+          },
+          {
+            "date": "2018-05-04T12:03:18+00:00",
+            "values": {
+              "customer": 3,
+              "staff_satisfaction": "4.8",
+              "sales": "4.5",
+              "cleanliness": "1.1"
+            }
+          },
+          {
+            "date": "2018-04-04T21:13:44+00:00",
+            "values": {
+              "customer": "3.3",
+              "staff_satisfaction": "3.5",
+              "sales": "4.3",
+              "cleanliness": "2.1"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a43e904a16706f1d8b",
+        "name": "Store 2013",
+        "ratings": [{
+            "date": "2018-10-29T09:34:04+00:00",
+            "values": {
+              "customer": "1.1",
+              "staff_satisfaction": "3.2",
+              "sales": "4.3",
+              "cleanliness": "4.1"
+            }
+          },
+          {
+            "date": "2018-05-13T10:44:39+00:00",
+            "values": {
+              "customer": "0.1",
+              "staff_satisfaction": "1.7",
+              "sales": "2.4",
+              "cleanliness": "3.4"
+            }
+          },
+          {
+            "date": "2017-04-05T22:21:47+00:00",
+            "values": {
+              "customer": "0.8",
+              "staff_satisfaction": "2.7",
+              "sales": "3.5",
+              "cleanliness": "3.6"
+            }
+          },
+          {
+            "date": "2019-05-26T10:01:10+00:00",
+            "values": {
+              "customer": "3.9",
+              "staff_satisfaction": 2,
+              "sales": "3.5",
+              "cleanliness": "3.1"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a4bc7ecdbdaa7dd4b7",
+        "name": "Store 2028",
+        "ratings": [{
+            "date": "2020-05-25T11:09:59+00:00",
+            "values": {
+              "customer": 5,
+              "staff_satisfaction": "0.1",
+              "sales": "3.1",
+              "cleanliness": "4.6"
+            }
+          },
+          {
+            "date": "2019-12-18T03:40:30+00:00",
+            "values": {
+              "customer": "1.5",
+              "staff_satisfaction": "3.7",
+              "sales": "2.6",
+              "cleanliness": "3.1"
+            }
+          },
+          {
+            "date": "2019-06-14T12:02:04+00:00",
+            "values": {
+              "customer": "3.6",
+              "staff_satisfaction": "3.1",
+              "sales": "0.9",
+              "cleanliness": "2.4"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1a4b7ac3620c054420f",
+        "name": "Store 2021",
+        "ratings": [{
+            "date": "2019-12-18T21:47:40+00:00",
+            "values": {
+              "customer": "2.2",
+              "staff_satisfaction": "2.5",
+              "sales": "4.6",
+              "cleanliness": "3.8"
+            }
+          },
+          {
+            "date": "2017-10-20T14:55:22+00:00",
+            "values": {
+              "customer": "3.7",
+              "staff_satisfaction": "0.7",
+              "sales": "4.1",
+              "cleanliness": "3.8"
+            }
+          },
+          {
+            "date": "2017-06-29T20:49:35+00:00",
+            "values": {
+              "customer": "3.5",
+              "staff_satisfaction": 5,
+              "sales": "0.1",
+              "cleanliness": "0.2"
+            }
+          },
+          {
+            "date": "2018-05-04T01:51:49+00:00",
+            "values": {
+              "customer": "1.4",
+              "staff_satisfaction": "1.9",
+              "sales": "2.2",
+              "cleanliness": "1.6"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "5f18e1ca8759f658ecb33b44",
+    "name": "East",
+    "restaurants": [{
+        "_id": "5f18e1ca62927f8964058b2b",
+        "name": "Store 4014",
+        "ratings": [{
+            "date": "2018-07-08T23:08:54+00:00",
+            "values": {
+              "customer": "4.9",
+              "staff_satisfaction": "2.7",
+              "sales": "0.9",
+              "cleanliness": "3.3"
+            }
+          },
+          {
+            "date": "2018-02-22T14:28:35+00:00",
+            "values": {
+              "customer": "2.6",
+              "staff_satisfaction": "4.4",
+              "sales": "0.1",
+              "cleanliness": "1.4"
+            }
+          },
+          {
+            "date": "2020-03-07T21:23:38+00:00",
+            "values": {
+              "customer": "4.4",
+              "staff_satisfaction": "3.5",
+              "sales": "4.4",
+              "cleanliness": "2.5"
+            }
+          },
+          {
+            "date": "2017-10-06T01:15:30+00:00",
+            "values": {
+              "customer": "3.1",
+              "staff_satisfaction": "4.9",
+              "sales": "1.9",
+              "cleanliness": 5
+            }
+          },
+          {
+            "date": "2020-02-12T06:12:08+00:00",
+            "values": {
+              "customer": "0.3",
+              "staff_satisfaction": "4.1",
+              "sales": "3.3",
+              "cleanliness": "1.1"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1caf81808ef0cd70a3e",
+        "name": "Store 3017",
+        "ratings": [{
+            "date": "2017-04-06T20:25:40+00:00",
+            "values": {
+              "customer": "2.6",
+              "staff_satisfaction": "2.8",
+              "sales": 3,
+              "cleanliness": "4.7"
+            }
+          },
+          {
+            "date": "2018-02-13T21:28:46+00:00",
+            "values": {
+              "customer": "1.2",
+              "staff_satisfaction": "2.4",
+              "sales": "4.1",
+              "cleanliness": "4.5"
+            }
+          },
+          {
+            "date": "2018-12-13T09:06:51+00:00",
+            "values": {
+              "customer": 3,
+              "staff_satisfaction": "0.2",
+              "sales": 1,
+              "cleanliness": "2.3"
+            }
+          },
+          {
+            "date": "2018-12-30T00:36:01+00:00",
+            "values": {
+              "customer": "1.7",
+              "staff_satisfaction": "4.5",
+              "sales": "3.6",
+              "cleanliness": "2.9"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1cad620dc1d9360cc19",
+        "name": "Store 3058",
+        "ratings": [{
+            "date": "2018-02-22T03:53:48+00:00",
+            "values": {
+              "customer": "2.5",
+              "staff_satisfaction": "4.2",
+              "sales": "3.3",
+              "cleanliness": "0.5"
+            }
+          },
+          {
+            "date": "2018-02-21T11:54:34+00:00",
+            "values": {
+              "customer": "4.9",
+              "staff_satisfaction": "3.9",
+              "sales": "2.5",
+              "cleanliness": "0.9"
+            }
+          },
+          {
+            "date": "2019-01-21T16:51:31+00:00",
+            "values": {
+              "customer": "2.9",
+              "staff_satisfaction": "1.4",
+              "sales": "0.3",
+              "cleanliness": "3.2"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1cad432f4bff62029dd",
+        "name": "Store 4059",
+        "ratings": [{
+            "date": "2017-05-26T18:15:07+00:00",
+            "values": {
+              "customer": "4.9",
+              "staff_satisfaction": "1.6",
+              "sales": "3.9",
+              "cleanliness": 0
+            }
+          },
+          {
+            "date": "2017-11-13T22:56:01+00:00",
+            "values": {
+              "customer": 2,
+              "staff_satisfaction": "2.2",
+              "sales": "3.8",
+              "cleanliness": "3.9"
+            }
+          },
+          {
+            "date": "2017-02-07T07:01:17+00:00",
+            "values": {
+              "customer": "2.7",
+              "staff_satisfaction": "3.7",
+              "sales": "4.4",
+              "cleanliness": "4.4"
+            }
+          },
+          {
+            "date": "2017-05-05T18:25:38+00:00",
+            "values": {
+              "customer": "0.9",
+              "staff_satisfaction": "4.4",
+              "sales": "2.6",
+              "cleanliness": "1.6"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1caa2b75e2ae50ac88b",
+        "name": "Store 4076",
+        "ratings": [{
+            "date": "2020-05-09T18:54:28+00:00",
+            "values": {
+              "customer": "2.9",
+              "staff_satisfaction": "4.5",
+              "sales": "2.9",
+              "cleanliness": "2.9"
+            }
+          },
+          {
+            "date": "2018-07-16T02:19:12+00:00",
+            "values": {
+              "customer": "2.7",
+              "staff_satisfaction": "4.1",
+              "sales": "1.3",
+              "cleanliness": "2.1"
+            }
+          },
+          {
+            "date": "2017-09-04T05:47:56+00:00",
+            "values": {
+              "customer": "0.1",
+              "staff_satisfaction": "4.2",
+              "sales": "3.6",
+              "cleanliness": "4.7"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1cab553dc91203af206",
+        "name": "Store 3029",
+        "ratings": [{
+            "date": "2019-10-10T13:29:51+00:00",
+            "values": {
+              "customer": "3.9",
+              "staff_satisfaction": "0.7",
+              "sales": "2.9",
+              "cleanliness": 5
+            }
+          },
+          {
+            "date": "2019-02-12T02:37:39+00:00",
+            "values": {
+              "customer": "2.1",
+              "staff_satisfaction": "2.2",
+              "sales": "2.7",
+              "cleanliness": "1.2"
+            }
+          },
+          {
+            "date": "2020-01-17T18:35:21+00:00",
+            "values": {
+              "customer": "0.7",
+              "staff_satisfaction": 0,
+              "sales": "1.5",
+              "cleanliness": "4.2"
+            }
+          },
+          {
+            "date": "2018-11-13T12:03:23+00:00",
+            "values": {
+              "customer": "1.7",
+              "staff_satisfaction": "3.4",
+              "sales": "4.8",
+              "cleanliness": "0.2"
+            }
+          },
+          {
+            "date": "2017-02-27T20:42:38+00:00",
+            "values": {
+              "customer": "1.6",
+              "staff_satisfaction": "3.9",
+              "sales": "3.4",
+              "cleanliness": "3.1"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1ca5a3a6f3731ebb796",
+        "name": "Store 2081",
+        "ratings": [{
+            "date": "2017-06-27T17:45:43+00:00",
+            "values": {
+              "customer": "2.4",
+              "staff_satisfaction": "3.2",
+              "sales": "0.9",
+              "cleanliness": "0.4"
+            }
+          },
+          {
+            "date": "2019-08-05T14:07:57+00:00",
+            "values": {
+              "customer": "0.1",
+              "staff_satisfaction": 2,
+              "sales": "4.4",
+              "cleanliness": "4.9"
+            }
+          },
+          {
+            "date": "2019-09-11T17:43:22+00:00",
+            "values": {
+              "customer": "4.4",
+              "staff_satisfaction": "3.9",
+              "sales": "0.3",
+              "cleanliness": "3.2"
+            }
+          },
+          {
+            "date": "2017-10-28T12:57:14+00:00",
+            "values": {
+              "customer": "2.6",
+              "staff_satisfaction": "2.3",
+              "sales": "0.5",
+              "cleanliness": "1.8"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1ca24099a1dc1f190c8",
+        "name": "Store 2068",
+        "ratings": [{
+            "date": "2020-06-05T19:34:31+00:00",
+            "values": {
+              "customer": "1.8",
+              "staff_satisfaction": "0.4",
+              "sales": "3.6",
+              "cleanliness": "4.2"
+            }
+          },
+          {
+            "date": "2020-06-04T08:11:07+00:00",
+            "values": {
+              "customer": "3.3",
+              "staff_satisfaction": "0.5",
+              "sales": 1,
+              "cleanliness": "1.3"
+            }
+          },
+          {
+            "date": "2019-09-16T02:49:47+00:00",
+            "values": {
+              "customer": "1.4",
+              "staff_satisfaction": "1.5",
+              "sales": "1.4",
+              "cleanliness": "4.3"
+            }
+          },
+          {
+            "date": "2017-12-04T15:24:25+00:00",
+            "values": {
+              "customer": 5,
+              "staff_satisfaction": "3.9",
+              "sales": "3.7",
+              "cleanliness": "4.1"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1cac2f64bb361b8f100",
+        "name": "Store 3017",
+        "ratings": [{
+            "date": "2018-12-31T13:20:39+00:00",
+            "values": {
+              "customer": "1.2",
+              "staff_satisfaction": "1.5",
+              "sales": "3.3",
+              "cleanliness": 5
+            }
+          },
+          {
+            "date": "2017-07-06T03:59:26+00:00",
+            "values": {
+              "customer": "0.2",
+              "staff_satisfaction": "1.4",
+              "sales": "4.9",
+              "cleanliness": "2.9"
+            }
+          },
+          {
+            "date": "2018-06-16T01:56:55+00:00",
+            "values": {
+              "customer": "2.9",
+              "staff_satisfaction": "0.7",
+              "sales": "1.4",
+              "cleanliness": "2.8"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e1ca6956c6d2a054703c",
+        "name": "Store 4054",
+        "ratings": [{
+            "date": "2017-10-07T02:10:24+00:00",
+            "values": {
+              "customer": 3,
+              "staff_satisfaction": "0.5",
+              "sales": "1.7",
+              "cleanliness": "2.8"
+            }
+          },
+          {
+            "date": "2019-09-25T07:25:33+00:00",
+            "values": {
+              "customer": "1.4",
+              "staff_satisfaction": "2.1",
+              "sales": "3.6",
+              "cleanliness": "2.5"
+            }
+          },
+          {
+            "date": "2017-10-17T05:26:33+00:00",
+            "values": {
+              "customer": "4.3",
+              "staff_satisfaction": "1.5",
+              "sales": "4.5",
+              "cleanliness": "4.8"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "5f18e20b3ee40bc8efddd41c",
+    "name": "West",
+    "restaurants": [{
+        "_id": "5f18e20b84b8e17c6c003229",
+        "name": "Store 4011",
+        "ratings": [{
+            "date": "2018-11-20T19:56:21+00:00",
+            "values": {
+              "customer": "0.6",
+              "staff_satisfaction": "3.5",
+              "sales": "0.8",
+              "cleanliness": "2.9"
+            }
+          },
+          {
+            "date": "2018-06-22T02:59:46+00:00",
+            "values": {
+              "customer": "2.4",
+              "staff_satisfaction": "3.8",
+              "sales": "4.8",
+              "cleanliness": "0.2"
+            }
+          },
+          {
+            "date": "2019-12-07T11:45:32+00:00",
+            "values": {
+              "customer": "4.8",
+              "staff_satisfaction": "4.3",
+              "sales": "4.3",
+              "cleanliness": "1.5"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20bb2d9419f88cb24c4",
+        "name": "Store 2012",
+        "ratings": [{
+            "date": "2017-07-03T09:48:21+00:00",
+            "values": {
+              "customer": "1.4",
+              "staff_satisfaction": 2,
+              "sales": "1.7",
+              "cleanliness": "4.7"
+            }
+          },
+          {
+            "date": "2017-12-02T04:53:08+00:00",
+            "values": {
+              "customer": "3.6",
+              "staff_satisfaction": "0.4",
+              "sales": "1.3",
+              "cleanliness": 0
+            }
+          },
+          {
+            "date": "2019-05-02T11:59:02+00:00",
+            "values": {
+              "customer": "3.8",
+              "staff_satisfaction": "0.6",
+              "sales": "4.5",
+              "cleanliness": "3.6"
+            }
+          },
+          {
+            "date": "2019-06-11T00:44:13+00:00",
+            "values": {
+              "customer": "4.2",
+              "staff_satisfaction": "0.4",
+              "sales": "0.6",
+              "cleanliness": "1.4"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20b67da235b2e2b7245",
+        "name": "Store 2050",
+        "ratings": [{
+            "date": "2018-06-12T17:54:36+00:00",
+            "values": {
+              "customer": 4,
+              "staff_satisfaction": "1.4",
+              "sales": 3,
+              "cleanliness": "4.1"
+            }
+          },
+          {
+            "date": "2019-07-15T18:07:47+00:00",
+            "values": {
+              "customer": "0.5",
+              "staff_satisfaction": 4,
+              "sales": "3.4",
+              "cleanliness": "0.1"
+            }
+          },
+          {
+            "date": "2020-03-20T06:04:22+00:00",
+            "values": {
+              "customer": "2.4",
+              "staff_satisfaction": "4.3",
+              "sales": "1.4",
+              "cleanliness": "2.5"
+            }
+          },
+          {
+            "date": "2019-04-08T10:09:52+00:00",
+            "values": {
+              "customer": "2.2",
+              "staff_satisfaction": "2.2",
+              "sales": "4.3",
+              "cleanliness": "4.2"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20b5a49e1ee98c5460e",
+        "name": "Store 2034",
+        "ratings": [{
+            "date": "2019-05-28T11:40:32+00:00",
+            "values": {
+              "customer": 1,
+              "staff_satisfaction": "0.3",
+              "sales": "1.5",
+              "cleanliness": 5
+            }
+          },
+          {
+            "date": "2017-07-04T09:46:54+00:00",
+            "values": {
+              "customer": "0.2",
+              "staff_satisfaction": "3.6",
+              "sales": "4.5",
+              "cleanliness": 4
+            }
+          },
+          {
+            "date": "2018-02-15T17:28:45+00:00",
+            "values": {
+              "customer": 0,
+              "staff_satisfaction": 1,
+              "sales": "1.8",
+              "cleanliness": "3.5"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20b9d62fd9572b9a2c0",
+        "name": "Store 2019",
+        "ratings": [{
+            "date": "2017-04-14T08:27:10+00:00",
+            "values": {
+              "customer": "1.2",
+              "staff_satisfaction": "2.7",
+              "sales": "0.3",
+              "cleanliness": 2
+            }
+          },
+          {
+            "date": "2019-07-27T01:35:52+00:00",
+            "values": {
+              "customer": "1.1",
+              "staff_satisfaction": "4.8",
+              "sales": "4.6",
+              "cleanliness": "0.7"
+            }
+          },
+          {
+            "date": "2020-03-05T11:55:17+00:00",
+            "values": {
+              "customer": "0.2",
+              "staff_satisfaction": "2.8",
+              "sales": "2.1",
+              "cleanliness": "3.9"
+            }
+          },
+          {
+            "date": "2017-05-10T13:53:13+00:00",
+            "values": {
+              "customer": "0.2",
+              "staff_satisfaction": "0.9",
+              "sales": "2.7",
+              "cleanliness": "3.5"
+            }
+          },
+          {
+            "date": "2019-01-22T00:14:11+00:00",
+            "values": {
+              "customer": "4.1",
+              "staff_satisfaction": "3.4",
+              "sales": "2.1",
+              "cleanliness": "0.5"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20bb93fee50abb49048",
+        "name": "Store 2064",
+        "ratings": [{
+            "date": "2017-06-23T09:32:45+00:00",
+            "values": {
+              "customer": 5,
+              "staff_satisfaction": "2.6",
+              "sales": 4,
+              "cleanliness": "0.4"
+            }
+          },
+          {
+            "date": "2019-07-07T23:49:25+00:00",
+            "values": {
+              "customer": "2.4",
+              "staff_satisfaction": "2.5",
+              "sales": "0.4",
+              "cleanliness": "2.6"
+            }
+          },
+          {
+            "date": "2017-06-12T18:40:15+00:00",
+            "values": {
+              "customer": "1.4",
+              "staff_satisfaction": "0.4",
+              "sales": "2.1",
+              "cleanliness": "1.5"
+            }
+          },
+          {
+            "date": "2017-12-10T09:58:39+00:00",
+            "values": {
+              "customer": "0.6",
+              "staff_satisfaction": "1.1",
+              "sales": "1.7",
+              "cleanliness": "3.9"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20b4e87e6a8912d9d1a",
+        "name": "Store 2031",
+        "ratings": [{
+            "date": "2017-06-15T09:16:30+00:00",
+            "values": {
+              "customer": 4,
+              "staff_satisfaction": "4.8",
+              "sales": "2.4",
+              "cleanliness": 4
+            }
+          },
+          {
+            "date": "2019-11-23T06:39:34+00:00",
+            "values": {
+              "customer": "1.8",
+              "staff_satisfaction": "4.7",
+              "sales": "4.3",
+              "cleanliness": 0
+            }
+          },
+          {
+            "date": "2017-02-04T11:25:06+00:00",
+            "values": {
+              "customer": "2.9",
+              "staff_satisfaction": "2.1",
+              "sales": "1.9",
+              "cleanliness": "1.2"
+            }
+          },
+          {
+            "date": "2018-07-21T02:58:26+00:00",
+            "values": {
+              "customer": "0.7",
+              "staff_satisfaction": "3.6",
+              "sales": "4.3",
+              "cleanliness": "0.8"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "5f18e20bd364d4db7d3c074c",
+        "name": "Store 3037",
+        "ratings": [{
+            "date": "2018-04-21T16:04:07+00:00",
+            "values": {
+              "customer": "3.3",
+              "staff_satisfaction": 3,
+              "sales": 4,
+              "cleanliness": "3.2"
+            }
+          },
+          {
+            "date": "2018-05-23T04:25:00+00:00",
+            "values": {
+              "customer": "1.2",
+              "staff_satisfaction": 5,
+              "sales": 1,
+              "cleanliness": "1.5"
+            }
+          },
+          {
+            "date": "2020-01-18T23:54:05+00:00",
+            "values": {
+              "customer": "1.3",
+              "staff_satisfaction": 5,
+              "sales": "0.3",
+              "cleanliness": 4
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
