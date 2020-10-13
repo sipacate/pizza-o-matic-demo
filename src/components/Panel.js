@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'hammerjs';
 import { toRatingsSplitter, toCompanyRatings } from '../tools/dataSplitter';
 
@@ -8,7 +8,7 @@ import { ChartView } from './ChartView';
 
 export const Panel = (props) => {
 
-  const { ratings: [_, ...ratings], selectedRatingsId, isChartView, setChartView } = props;
+  const { ratings: [, ...ratings], selectedRatingsId, isChartView, setChartView } = props;
 
   const localRatings = ratings.find((rating) => rating._id === selectedRatingsId);
   const region = localRatings ? localRatings.name : "All Regions";
@@ -19,6 +19,8 @@ export const Panel = (props) => {
   const regionOrStoreMeans = ratingsSplitter(region);
 
   const SeriesView = isChartView ? ChartView : TableView;
+
+  const onDownload = useRef(null);
 
   return (
     <>
@@ -41,7 +43,7 @@ export const Panel = (props) => {
           <img
             src="download.svg"
             alt="download"
-            onClick={() => {}}
+            onClick={isChartView ? () => {} : () => onDownload.current.save()}
           />
         </span>
       </div>
@@ -49,6 +51,7 @@ export const Panel = (props) => {
         ratings={ratings}
         region={region}
         means={regionOrStoreMeans}
+        onDownload={onDownload}
       />
     </>
   );
