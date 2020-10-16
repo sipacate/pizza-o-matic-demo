@@ -1,5 +1,4 @@
 h1 {
-  background: url('/header.svg') no-repeat;
   color: white;
   margin: 0;
   font-weight: bold;
@@ -14,32 +13,28 @@ h1 span {
 }
 
 .ratings-header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.ratings-header > .actions-bar {
+  margin-left: auto;
 }
 
-.ratings-header .buttons-span {
-  margin-right: 40px;
-  float: right;
+.actions-bar .k-button {
+  margin: 5px;
+}
+
+.actions-bar .view-button:disabled {
+  background: #0040ff40;
+}
+
+.actions-bar .k-button .k-icon {
+  font-size: 2rem;
 }
 
 .ratings-header h2 {
   display: inline;
   font-size: 30px;
-}
-
-.ratings-header img {
-  height: 30px;
-  width: 35px;
-  margin: 5px;
-  padding: 5px 5px;
-  cursor: pointer;
-}
-
-.ratings-header .active {
-  background: #0040FF40;
-  border-radius: 10px;
-  height: 35px;
-  width: 40px;
 }
 
 @media (max-width: 700px) {
@@ -54,19 +49,36 @@ h1 span {
   }
 }
 
-.flex-container {
-  list-style: none;
-  display: inline;
-  flex-wrap: nowrap;
-}
-
-.flex-item {
+.rating-item {
   border: 1px solid black;
   border-radius: 10px;
   color: black;
   margin: 10px;
   padding: 10px;
-  display: inline-block;
   font-size: 15px;
-  /* float: right; */
+}
+
+.banner {
+  height: 15vh;
+  background: url('/header.svg') no-repeat;
+}
+
+.content {
+  height: 85vh;
+  display: flex;
+}
+
+.main-section {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.regions-menu {
+  font-size: large;
+  border: none;
+  min-width: 10vw;
+}
+
+.regions-menu .k-item {
+  border: none;
 }

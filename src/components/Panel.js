@@ -1,140 +1,55 @@
-import React, { useRef } from 'react';
-import {
-  Chart,
-  ChartTitle,
-  ChartSeries,
-  ChartLegend,
-  ChartSeriesItem,
-  ChartCategoryAxis,
-  ChartCategoryAxisItem,
-} from '@progress/kendo-react-charts';
-import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
-import { ExcelExport } from '@progress/kendo-react-excel-export';
+import React, { useRef, useState, useEffect } from 'react';
+import { Button } from '@progress/kendo-react-buttons';
 import 'hammerjs';
-import { toRatingsSplitter, toCompanyRatings, toChartCategories, toGridData } from '../tools/dataSplitter';
+import CompanyRatings from './CompanyRatings';
+import RegionView from './RegionView';
+import CompanyView from './CompanyView';
 
-const toFormattedCategory = category => {
-  const upperCaseCategory = category.charAt(0).toUpperCase() + category.slice(1);
-  return upperCaseCategory.split('_').join(' ');
-};
-
-const TableView = ({ ratings, region, means, onDownload }) => {
-  const chartCategories = toChartCategories(ratings);
-  const locality = region === 'All Regions' ? 'region' : 'restaurant';
-
-  const heading = <Column field={locality} title={locality} key={`first-col-${locality}`} />;
-  const columns = chartCategories.map(category => {
-    const key = `table-column-${category}`
-    return <Column field={category} title={category} key={key} />;
+export const Panel = ({ regions, regionId }) => {
+  const [isChartView, setChartView] = useState(true);
+  const SeriesView = regionId ? RegionView : CompanyView;
+  const exporterRef = useRef(null);
+  const [canExport, setCanExport] = useState(false);
+  useEffect(() => {
+    setCanExport(!!exporterRef?.current?.save);
   });
-
-  const headedColumns = [heading, columns];
-
-  const gridData = toGridData(locality, means);
-
-  return (
-    <ExcelExport
-      data={gridData} 
-      fileName="pizza_data.xlsx" 
-      ref={exporter => { onDownload.current = exporter }}
-    >
-      <Grid data={gridData}>{headedColumns}</Grid>
-    </ExcelExport>
-  );
-};
-
-const ChartView = ({ ratings, region, means }) => {
-  const chartCategories = toChartCategories(ratings);
-  const seriesItems = means.map(({ name, ratings }) => {
-    const spaceStripper = x => x.split(' ').join('-');
-    const key = `${spaceStripper(region)}-${spaceStripper(name)}`;
-    const chartData = Object.values(ratings);
-    return <ChartSeriesItem type="column" data={chartData} key={key} />;
-  });
-  return (
-    <Chart>
-      <ChartTitle text={region} />
-      <ChartCategoryAxis>
-        <ChartCategoryAxisItem categories={chartCategories} />
-      </ChartCategoryAxis>
-      <ChartLegend position="bottom" orientation="horizontal" />
-        <ChartSeries>
-          {seriesItems}
-        </ChartSeries>
-    </Chart>
-  );
-};
-
-const CompanyRatings = ({ ratings }) => {
-
-  const ratingCategories = Object.keys(ratings);
-
-  const ratingsElements = ratingCategories.map((category) => {
-    const score = ratings[category];
-    return (<li className="flex-item" key={score}>
-      {toFormattedCategory(category)}: {score.toFixed(1)}
-    </li>);
-  });
-
-  return (
-    <ul className="flex-container">
-      {ratingsElements}
-    </ul>
-  );
-};
-
-export const Panel = ({ ratings: [_, ...ratings], selectedRatingsId, isChartView, setChartView }) => {
-
-  const localRatings = ratings.find((rating) => rating._id === selectedRatingsId);
-  const region = localRatings ? localRatings.name : "All Regions";
-
-  const ratingsSplitter = toRatingsSplitter(ratings);
-  const companyRatings = toCompanyRatings(ratings);
-
-  const regionOrStoreMeans = ratingsSplitter(region);
-
-  const SeriesView = isChartView ? ChartView : TableView;
-
-  const onDownload = useRef(null);
 
   return (
     <>
-      <div className="ratings-header">
+      <header className="ratings-header">
         <h2>Company Ratings</h2>
-        <CompanyRatings ratings={companyRatings} />
-        <span className="buttons-span">
-          <img
-            src="chart-bar.svg"
-            alt="chart view"
-            className={isChartView ? "active" : "inactive"}
+        <CompanyRatings regions={regions} />
+        <span className="actions-bar">
+          <Button
+            icon="chart-column-clustered"
+            className="view-button"
+            disabled={isChartView}
             onClick={() => setChartView(true)}
           />
-          <img
-            src="table.svg"
-            alt="cell view"
-            className={isChartView ? "inactive" : "active"}
+          <Button
+            icon="grid"
+            className="view-button"
+            disabled={!isChartView}
             onClick={() => setChartView(false)}
           />
-          <img
-            src="download.svg"
-            alt="download"
-            onClick={() => onDownload.current.save()}
+          <Button
+            className="download"
+            icon="download"
+            disabled={!canExport}
+            onClick={() => exporterRef?.current?.save()}
           />
         </span>
-      </div>
+      </header>
       <SeriesView
-        ratings={ratings}
-        region={region}
-        means={regionOrStoreMeans}
-        onDownload={onDownload}
+        regionId={regionId}
+        regions={regions}
+        isChartView={isChartView}
+        exporterRef={exporterRef}
       />
     </>
   );
 };
 
 Panel.defaultProps = {
-  ratings: [],
-  selectedRatingsId: "All Regions",
-  isChartView: true,
-  setChartView: () => {}
+  regions: [],
 };
