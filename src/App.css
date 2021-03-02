@@ -1,5 +1,5 @@
 h1 {
-  background: url('/header.svg') no-repeat;
+  background: url('./header.svg')  no-repeat;
   color: white;
   margin: 0;
   font-weight: bold;

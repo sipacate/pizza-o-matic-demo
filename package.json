@@ -1,6 +1,7 @@
 {
   "name": "demo-pizza-o-matic",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "homepage": "https://www.digitalprimates.net/clients/ms-teams/pizza-o-matic/",
   "private": true,
   "dependencies": {
     "@progress/kendo-data-query": "^1.5.4",
